@@ -1,0 +1,5 @@
+pandas
+Faker
+cryptography
+psycopg2-binary
+python-dotenv
