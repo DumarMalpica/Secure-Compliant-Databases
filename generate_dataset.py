@@ -2,8 +2,8 @@
 from faker import Faker
 import pandas as pd
 
-fake = Faker('es_CO')  # locale opcional
-rows = 200  # tamaño del dataset
+fake = Faker('es_CO') 
+rows = 200 
 
 data = []
 for _ in range(rows):

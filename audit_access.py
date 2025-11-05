@@ -25,8 +25,8 @@ def log_access(user, accion, detalle):
 def read_users(requesting_user="analista"):
     conn = psycopg2.connect(**DB_CFG)
     cur = conn.cursor(cursor_factory=RealDictCursor)
-    # ejemplo: devolver solo columnas anonimizadas/pseudonimizadas
-    cur.execute("SELECT id, nombre_pseudo, correo_masked, telefono_masked FROM usuarios LIMIT 20")
+    #ejemplo
+    cur.execute("SELECT id, nombre_pseudo, correo_masked, telefono_masked FROM usuarios LIMIT 10")
     rows = cur.fetchall()
     cur.close()
     conn.close()
