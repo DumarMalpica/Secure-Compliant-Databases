@@ -89,6 +89,7 @@ def main():
     df2['nombre_original'] = df['nombre']
     # elegir reversible o irreversible
     df2['nombre_pseudo'] = df['nombre'].apply(pseudonimize_name_irreversible)
+    #df2['nombre_pseudo'] = df['nombre'].apply(pseudonimize_name_reversible)
     df2['dni_hash'] = df['dni'].apply(lambda x: hash_dni(x))
     df2['correo_masked'] = df['correo'].apply(mask_email)
     df2['telefono_masked'] = df['telefono'].apply(mask_phone)
